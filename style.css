@@ -1,0 +1,44 @@
+body {
+    height: 50vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(188, 188, 188);
+
+    padding: 300px;
+    gap: 10px;
+}
+
+.box-grid {
+    background-color: rgb(107, 128, 128);
+
+    max-width: 80vmin;
+    aspect-ratio: 1 / 1; 
+    flex: auto;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    gap: 1px;
+    padding: 10px;
+
+}
+
+.column {
+    background: black;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 1px;
+}
+
+.square {
+    background-color: white;
+
+    flex: 1;
+}
+
