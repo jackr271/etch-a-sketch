@@ -1,19 +1,27 @@
 let squareDimension = 16;
+buildGrid(squareDimension);
 
-const column = document.createElement('div');
-column.className = 'column';
 
-const square = document.createElement('div');
-square.className = 'square';
+function buildGrid (sideLength) {
+    const grid = document.querySelector('.box-grid');
 
-const grid = document.querySelector('.box-grid');
-for (let i = 0; i < squareDimension; i++) {
+    for (let i = 0; i < sideLength; i++) {
+        const column = buildColumn(sideLength);
+        grid.appendChild(column);
+    }
+
+    return grid;
+}
+
+function buildColumn (length) {
     const column = document.createElement('div');
     column.className = 'column';
-    for (let j = 0; j < squareDimension; j++) {
+
+    for (let j = 0; j < length; j++) {
         const square = document.createElement('div');
         square.className = 'square';
         column.appendChild(square);
     }
-    grid.appendChild(column);
+
+    return column;
 }
